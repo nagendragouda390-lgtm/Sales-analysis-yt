@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("/storage/8006-15FE/sales_analysis_yt/customer_shopping_behavior.csv")
+df = pd.read_csv("data/customer_shopping_behavior.csv")
 
 info = df.info()
 describe = df.describe(include="all")
@@ -28,7 +28,7 @@ df["age_group"] = pd.qcut(df["age"],q=4,labels = age_group)
 
 df = df.drop(columns={"promo_code_used"})
 
-df.to_csv("/storage/8006-15FE/sales_analysis_yt/data.csv",index=False)
+df.to_csv("data/data.csv",index=False)
 
 
 
